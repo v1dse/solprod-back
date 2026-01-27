@@ -9,14 +9,13 @@ load_dotenv()
 
 app = FastAPI(title="SolProd AI Assistant")
 
-# CORS для вашего фронтенда
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://solprod.agency",
-        "https://solprod-ai.onrender.com",
         "http://localhost:3000",
-        "http://localhost:3001"
+        "http://localhost:3001",
+        "http://127.0.0.1:3000",  
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -38,6 +37,10 @@ class ChatResponse(BaseModel):
     message: str
     conversation_history: list
 
+@app.get("/")
+async def root():
+    return {"status": "ok", "message": "SolProd AI API is running"}
+
 @app.get("/api/health")
 async def health():
     return {"status": "ok"}
@@ -45,7 +48,7 @@ async def health():
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(data: ChatMessage):
     try:
-        # Конвертируем историю в формат Gemini
+
         gemini_history = []
         for msg in data.conversation_history:
             role = "user" if msg["role"] == "user" else "model"
@@ -54,14 +57,13 @@ async def chat(data: ChatMessage):
                 "parts": [msg["content"]]
             })
         
-        # Создаем чат с историей
+
         chat_session = model.start_chat(history=gemini_history)
         
-        # Отправляем сообщение
+
         response = chat_session.send_message(data.message)
         assistant_message = response.text
         
-
         conversation = data.conversation_history + [
             {"role": "user", "content": data.message},
             {"role": "assistant", "content": assistant_message}
@@ -73,6 +75,7 @@ async def chat(data: ChatMessage):
         )
         
     except Exception as e:
+        print(f"Error: {str(e)}") 
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
