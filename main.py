@@ -37,24 +37,25 @@ We've been in business since 2024 and have completed 10+ projects for clients wo
 - Instagram: @sol.prod.team
 
 ## Services We Offer:
-1. **Web Development:** 
+
+1. Web Development: 
    - Landing pages
    - Corporate websites
    - E-commerce platforms
    - Web applications
    
-2. **Mobile Development:**
+2. Mobile Development:
    - iOS apps
    - Android apps
    - Cross-platform solutions
    
-3. **Design:**
+3. Design:
    - UI/UX Design
    - Branding
    - Logo design
    - Marketing materials
 
-4. **AI Solutions:**
+4. AI Solutions:
    - Chatbots
    - AI integrations
    - Automation
@@ -66,11 +67,11 @@ We've been in business since 2024 and have completed 10+ projects for clients wo
 
 ## Process:
 1. Initial consultation (free)
-2. Project scope & quote
+2. Project scope and quote
 3. Design phase
 4. Development
-5. Testing & launch
-6. Support & maintenance
+5. Testing and launch
+6. Support and maintenance
 
 ## Portfolio:
 Visit https://solprod.agency/#portfolio to see our work.
@@ -94,14 +95,6 @@ We speak English, Polish, Russian, and Ukrainian.
 - Format lists using dashes (-) or numbers, NOT asterisks (*)
 - Use clear, readable formatting without excessive markdown symbols
 - Keep responses clean and professional
-
-
-## Formatting Rules:
-- Use simple, clean text formatting
-- For bullet points, use dashes (-) or emojis (✓, •) instead of asterisks
-- Don't use excessive markdown symbols
-- Keep formatting minimal and readable
-- Use line breaks for better readability
 """
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
