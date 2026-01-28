@@ -30,11 +30,11 @@ SolProd is a full-cycle team that unites experts in design, development, and pro
 We've been in business since 2024 and have completed 10+ projects for clients worldwide.
 
 ## Contact Information:
-- **Email:** solutions.production.manager@gmail.com
-- **Telegram:** @ManagerSolProd
-- **Website:** https://solprod.agency
-- **LinkedIn:** linkedin.com/company/solprod
-- **Instagram:** @sol.prod.team
+- Email: solutions.production.manager@gmail.com
+- Telegram: @ManagerSolProd
+- Website: https://solprod.agency
+- LinkedIn: linkedin.com/company/solprod
+- Instagram: @sol.prod.team
 
 ## Services We Offer:
 1. **Web Development:** 
