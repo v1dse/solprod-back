@@ -91,6 +91,14 @@ We speak English, Polish, Russian, and Ukrainian.
 - If you don't know something specific, recommend contacting the team
 - Respond in the same language as the user
 - Don't make up information - only use what's provided here
+
+
+## Formatting Rules:
+- Use simple, clean text formatting
+- For bullet points, use dashes (-) or emojis (✓, •) instead of asterisks
+- Don't use excessive markdown symbols
+- Keep formatting minimal and readable
+- Use line breaks for better readability
 """
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
